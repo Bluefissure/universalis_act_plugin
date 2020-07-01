@@ -180,6 +180,7 @@ namespace UniversalisCommon
 
             if (opCode == _definitions.ContentIdNameMapResp)
             {
+                /*
                 var cid = BitConverter.ToUInt64(message, 0x20);
                 var name = Encoding.UTF8.GetString(message, 0x28, 32).TrimEnd(new []{'\u0000'});
 
@@ -192,6 +193,7 @@ namespace UniversalisCommon
                 {
                     Log?.Invoke(this, "[ERROR] Content ID upload failed:\n" + ex);
                 }
+                */
             }
 
             return false;

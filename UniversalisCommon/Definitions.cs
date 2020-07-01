@@ -6,14 +6,14 @@ namespace UniversalisPlugin
 {
     public class Definitions
     {
-        public short PlayerSpawn = 0x0DC;
-        public short PlayerSetup = 0x3B4;
-        public short MarketBoardItemRequestStart = 0x349;
-        public short MarketBoardOfferings = 0x130;
-        public short MarketBoardHistory = 0x1F7;
+        public short PlayerSpawn = 278;
+        public short PlayerSetup = 710;
+        public short MarketBoardItemRequestStart = 561;
+        public short MarketBoardOfferings = 727;
+        public short MarketBoardHistory = 223;
         public short ContentIdNameMapResp = 0x172;
 
-        private static readonly Uri DefinitionStoreUrl = new Uri("https://raw.githubusercontent.com/goaaats/universalis_act_plugin/master/definitions.json");
+        private static readonly Uri DefinitionStoreUrl = new Uri("https://gitee.com/bluefissure/universalis_act_plugin/blob/cn/definitions.json");
 
         public static string GetJson() => JsonConvert.SerializeObject(new Definitions());
 
