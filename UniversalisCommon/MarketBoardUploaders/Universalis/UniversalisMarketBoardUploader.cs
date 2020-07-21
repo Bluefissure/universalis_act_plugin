@@ -26,6 +26,7 @@ namespace Dalamud.Game.Network.Universalis.MarketBoardUploaders
         {
             using (var client = new WebClient())
             {
+                client.Encoding = System.Text.Encoding.UTF8;
                 _packetProcessor.Log?.Invoke(this, "Starting Universalis upload.");
                 var uploader = _packetProcessor.LocalContentId;
 

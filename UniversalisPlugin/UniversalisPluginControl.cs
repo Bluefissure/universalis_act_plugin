@@ -155,7 +155,8 @@ namespace UniversalisPlugin
                     MessageBox.Show(
                         "The Universalis plugin needs to be updated. Please download an updated version from the GitHub releases page.",
                         "Universalis plugin update", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                    Process.Start("https://github.com/goaaats/universalis_act_plugin/releases/latest");
+                    //Process.Start("https://github.com/goaaats/universalis_act_plugin/releases/latest");
+                    Process.Start("https://gitee.com/bluefissure/universalis_act_plugin/releases");
 
                     Log("Plugin needs update.");
                     lblStatus.Text = "Needs update";
@@ -204,6 +205,8 @@ namespace UniversalisPlugin
 
         private void DataSubscriptionOnNetworkReceived(string connection, long epoch, byte[] message)
         {
+            if (_universalisPacketProcessor == null)
+                return;
             if (_universalisPacketProcessor.ProcessZonePacket(message))
                 IncreaseUploadCount();
         }
@@ -249,7 +252,8 @@ namespace UniversalisPlugin
             {
                 var remoteVersion =
                     client.DownloadString(
-                        "https://raw.githubusercontent.com/goaaats/universalis_act_plugin/master/version");
+                        /*"https://raw.githubusercontent.com/goaaats/universalis_act_plugin/master/version");*/
+                        "https://gitee.com/bluefissure/universalis_act_plugin/raw/master/version");
 
                 return !remoteVersion.StartsWith(GetAssemblyVersion());
             }

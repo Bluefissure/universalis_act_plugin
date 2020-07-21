@@ -13,7 +13,8 @@ namespace UniversalisPlugin
         public short MarketBoardHistory = 223;
         public short ContentIdNameMapResp = 0x172;
 
-        private static readonly Uri DefinitionStoreUrl = new Uri("https://gitee.com/bluefissure/universalis_act_plugin/blob/cn/definitions.json");
+        private static readonly Uri DefinitionStoreUrl = new Uri("https://gitee.com/bluefissure/universalis_act_plugin/raw/cn/definitions.json");
+        //private static readonly Uri DefinitionStoreUrl = new Uri("https://raw.githubusercontent.com/Bluefissure/universalis_act_plugin/cn/definitions.json");
 
         public static string GetJson() => JsonConvert.SerializeObject(new Definitions());
 
